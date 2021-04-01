@@ -1,0 +1,27 @@
+plugins {
+    id 'groovy'
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '4.0.4'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile group: 'net.dv8tion', name: 'JDA', version: '4.2.0_168'
+    compile group: 'com.jagrosh', name: 'jda-utilities', version: '3.0.1'
+    compile group: 'me.duncte123', name: 'botCommons', version: '1.0.45'
+    // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java',
+            version: '3.141.59'
+    compile 'io.github.cdimascio:java-dotenv:5.1.1'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
+}
+compileJava.options.encoding = 'UTF-8'
